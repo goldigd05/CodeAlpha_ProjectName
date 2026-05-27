@@ -1,18 +1,38 @@
 const songs = [
   {
-    title: "Soft Romantic",
+    title: "Love Tune",
     artist: "Arijit Style",
     src: "https://cdn.pixabay.com/download/audio/2022/11/29/audio_5762a5f2b3.mp3?filename=soft-romantic-126689.mp3"
   },
+
   {
-    title: "Dreamy Night",
+    title: "Soft Romantic",
     artist: "Arijit Style",
     src: "https://cdn.pixabay.com/download/audio/2023/01/19/audio_39b3e2b9b1.mp3?filename=dreamy-night-132821.mp3"
   },
+
+  {
+    title: "Dreamy Night",
+    artist: "Arijit Style",
+    src: "https://cdn.pixabay.com/download/audio/2023/01/05/audio_57e3d3f1b5.mp3?filename=sad-romantic-song-130523.mp3"
+  },
+
   {
     title: "Sad Melody",
     artist: "Arijit Style",
-    src: "https://cdn.pixabay.com/download/audio/2023/01/05/audio_57e3d3f1b5.mp3?filename=sad-romantic-song-130523.mp3"
+    src: "https://cdn.pixabay.com/download/audio/2023/05/04/audio_38df924ad5.mp3?filename=emotional-piano-146612.mp3"
+  },
+
+  {
+    title: "Emotional Piano",
+    artist: "Arijit Style",
+    src: "https://cdn.pixabay.com/download/audio/2023/02/06/audio_4e6aee0a8f.mp3?filename=calm-piano-134315.mp3"
+  },
+
+  {
+    title: "Calm Heart",
+    artist: "Arijit Style",
+    src: "https://cdn.pixabay.com/download/audio/2023/04/15/audio_3f89ec55a0.mp3?filename=rain-piano-145703.mp3"
   }
 ];
 
@@ -25,14 +45,17 @@ const songList = document.getElementById("songList");
 const audioPlayer = document.getElementById("audioPlayer");
 const songTitle = document.getElementById("songTitle");
 const songArtist = document.getElementById("songArtist");
+
 const playPauseBtn = document.getElementById("playPauseBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+
 const shuffleBtn = document.getElementById("shuffleBtn");
 const loopBtn = document.getElementById("loopBtn");
 const themeToggle = document.getElementById("themeToggle");
 
 songs.forEach((song, index) => {
+
   const li = document.createElement("li");
 
   li.textContent = `${song.title} - ${song.artist}`;
@@ -42,16 +65,22 @@ songs.forEach((song, index) => {
   });
 
   songList.appendChild(li);
+
 });
 
 function updateActiveSong() {
 
-  document.querySelectorAll("#songList li").forEach((li, i) => {
+  const allSongs = document.querySelectorAll("#songList li");
 
-    if (i === currentSongIndex) {
-      li.style.background = "rgba(255,255,255,0.6)";
+  allSongs.forEach((song, index) => {
+
+    if (index === currentSongIndex) {
+
+      song.style.background = "rgba(255,255,255,0.6)";
+
     } else {
-      li.style.background = "rgba(255,255,255,0.2)";
+
+      song.style.background = "rgba(255,255,255,0.2)";
     }
 
   });
@@ -93,8 +122,11 @@ function pauseSong() {
 playPauseBtn.addEventListener("click", () => {
 
   if (isPlaying) {
+
     pauseSong();
+
   } else {
+
     playSong();
   }
 
@@ -120,7 +152,6 @@ nextBtn.addEventListener("click", () => {
 
     currentSongIndex =
       (currentSongIndex + 1) % songs.length;
-
   }
 
   loadSong(currentSongIndex);
@@ -131,8 +162,14 @@ shuffleBtn.addEventListener("click", () => {
 
   isShuffle = !isShuffle;
 
-  shuffleBtn.style.background =
-    isShuffle ? "lightgreen" : "";
+  if (isShuffle) {
+
+    shuffleBtn.style.background = "lightgreen";
+
+  } else {
+
+    shuffleBtn.style.background = "";
+  }
 
 });
 
@@ -142,8 +179,14 @@ loopBtn.addEventListener("click", () => {
 
   audioPlayer.loop = isLoop;
 
-  loopBtn.style.background =
-    isLoop ? "lightgreen" : "";
+  if (isLoop) {
+
+    loopBtn.style.background = "lightgreen";
+
+  } else {
+
+    loopBtn.style.background = "";
+  }
 
 });
 
@@ -156,6 +199,7 @@ themeToggle.addEventListener("click", () => {
 audioPlayer.addEventListener("ended", () => {
 
   if (!isLoop) {
+
     nextBtn.click();
   }
 
@@ -163,6 +207,7 @@ audioPlayer.addEventListener("ended", () => {
 
 songTitle.textContent = songs[0].title;
 songArtist.textContent = songs[0].artist;
+
 audioPlayer.src = songs[0].src;
 
 updateActiveSong();
