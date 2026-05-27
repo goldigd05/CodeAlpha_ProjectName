@@ -1,45 +1,55 @@
-# CodeAlpha Internship Projects
-This repository contains the completed tasks for my **CodeAlpha Frontend Development Internship**.  
-I have successfully completed **all four assigned tasks** using HTML, CSS, and JavaScript.
-## 📌 Project List
-### 1. Image Gallery
-- Designed an image gallery using **HTML** and **CSS layout**.
-- Added **JavaScript navigation** (next/prev buttons, lightbox view).
-- Implemented hover effects and smooth transitions.
-- Fully responsive for different screen sizes.
-- **Bonus**: Added image filters and category selection.
-  
-### 2. Calculator
-- Built a **basic calculator** using HTML, CSS, and JavaScript.
-- Supports all arithmetic operations: `+`, `-`, `*`, `/`, `%`.
-- Designed a clean interface with **buttons** and **display screen**.
-- Includes clear and delete functionality.
-- **Bonus**: Added keyboard support.
+# 🚀 CodeAlpha Frontend Projects   live link -: https://goldigd05.github.io/CodeAlpha_ProjectName/
 
-### 3. Personal Portfolio
-- Designed a **personal portfolio website** with sections: About, Projects, Skills, and Contact.
-- Added smooth scrolling and animations.
-- Integrated responsive design for all devices.
-- **Deployed on GitHub Pages**.
+This repository contains multiple frontend web development projects created using HTML, CSS, and JavaScript.
 
-### 4. Music Player
-- Created a **music player** interface with HTML, CSS, and JavaScript.
-- Supports play, pause, next, and previous controls.
-- Displays **song title**, **artist**, and **duration**.
-- Added a progress bar and volume control.
-- **Bonus**: Added playlist and autoplay features.
+## 📌 Projects Included
 
-## 🚀 Technologies Used
+### 1️⃣ Build My Own Portfolio Site
+A personal portfolio website showcasing skills, projects, and contact details.
+
+### 2️⃣ Calculator
+A simple and responsive calculator for performing basic arithmetic operations.
+
+### 3️⃣ Image Gallery
+An interactive image gallery with modern UI and responsive design.
+
+### 4️⃣ Music Player
+A glassmorphism-style music player with playlist support, dark mode, shuffle, and loop functionality.
+
+---
+
+## 🛠️ Technologies Used
+
 - HTML5
 - CSS3
-- JavaScript (Vanilla JS)
-- Responsive Web Design (Media Queries)
-- 
-## 🎯 Internship Details
-- **Domain:** Frontend Development
-- **Internship Provider:** [CodeAlpha](https://codealpha.tech)
-- **Tasks Completed:** 4/4
-- **Duration:** 10 July 2025- 10 August 2025
+- JavaScript
+- GitHub Pages
 
+---
 
-## 📂 Folder Structure
+## 🌐 Live Projects
+
+### Portfolio
+https://goldigd05.github.io/CodeAlpha_ProjectName/Build-my-Own-Portfolio-site/index1.html
+
+### Calculator
+https://goldigd05.github.io/CodeAlpha_ProjectName/Calculator/index2.html
+
+### Image Gallery
+https://goldigd05.github.io/CodeAlpha_ProjectName/Image-Gallery/index3.html
+
+### Music Player
+https://goldigd05.github.io/CodeAlpha_ProjectName/Music_Player_Using_Javascript/
+
+---
+
+## 📂 Repository Structure
+
+```txt
+CodeAlpha_ProjectName/
+│
+├── Build-my-Own-Portfolio-site/
+├── Calculator/
+├── Image-Gallery/
+├── Music_Player_Using_Javascript/
+└── README.md
